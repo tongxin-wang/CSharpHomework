@@ -20,6 +20,18 @@ namespace OrderManage
             OrderList.Add(order);
         }
 
+        public void AddOrderItem(Order order, OrderItem orderItem)
+        {
+            try
+            {
+                order.AddOrderItem(orderItem);
+            }
+            catch(DataException e)
+            {
+                throw e;
+            }
+        }
+
         //根据订单号删除订单
         public void RemoveOrder(long orderID)
         {
@@ -40,6 +52,18 @@ namespace OrderManage
             else
             {
                 OrderList.Remove(order);
+            }
+        }
+
+        public void RemoveOrderItem(Order order, OrderItem orderItem)
+        {
+            try
+            {
+                order.RemoveOrderItem(orderItem);
+            }
+            catch(DataException e)
+            {
+                throw e;
             }
         }
 

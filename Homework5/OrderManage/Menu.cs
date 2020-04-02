@@ -417,7 +417,7 @@ namespace OrderManage
 
                 try
                 {
-                    order.AddOrderItem(orderItem);
+                    OS.AddOrderItem(order, orderItem);
                     changeNum++;
                 }
                 catch(DataException e)
@@ -485,7 +485,7 @@ namespace OrderManage
 
                 try
                 {
-                    order.RemoveOrderItem(orderItem);
+                    OS.RemoveOrderItem(order, orderItem);
                     changeNum++;
                 }
                 catch(DataException e)
